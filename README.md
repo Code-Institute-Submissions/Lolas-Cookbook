@@ -1,45 +1,115 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+Lola’s Cookbook - Recipe Manager
+---------------------------------------
+**Data Centric Development - Marjolein van Leeuwen**
 
-Welcome USER_NAME,
+This is my Data Centric Development project. 
+I created Lola’s Cookbook to store my family’s recipes and created a login for users who would like to share their recipes with eachother.  I have called it Lola’s cookbook, because we always called my mother Lola and she had a real talent in Filipino cooking. 
+And I wanted to store and share her recipes with others.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Click [here][DEMO] for my deployed project.
 
-## Gitpod Reminders
+**User stories**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* As a user : As a new visitor to Lola's cookbook, I want the page to be easily navigated.
+* As a user: As a new visitor I want clear instructions on how to add, view, update and delete recipes.
+* As a user: I want a cookbook web app that responds quickly to my interaction.
 
-`python3 -m http.server`
+The ideal user:
+* Food lovers who like to manage and share their recipes with eachother.
 
-A blue button should appear to click: *Make Public*,
+**Strategy**
 
-Another blue button should appear to click: *Open Browser*.
+* My Goal is to 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**Scope**
 
-A blue button should appear to click: *Make Public*,
+This web app ….
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**Structure**
 
-## Updates Since The Instructional Video
+* 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Skeleton** 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+I created a wireframe using the program “Mockflow”. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Wireframe]()
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Surface**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* For the surface plane I wanted the design ….. 
+* My background design was inspired by …..
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+**Technologies**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1. HTML
+2. CSS
+3. Javascript
+4. Python
+5. Flask
+6. MongoDB
+7. Materialize
+8. Heroku
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Features**
 
---------
+* 
 
-Happy coding!
+**Testing**
+
+All testing carried out was done manually.
+Testing problems I encountered:
+
+
+**Features Left to Implement**
+
+*
+
+**Deployment**
+
+This project was developed using GitHub, MongoDB en Heroku
+Proces:
+
+Step 1
+I created my database with MongoDB Atlas. I wanted to  first get my data in place and start building my application around it.  I created a database called: Filipino_Recipes. I added collections and inserted documents to create my first Filipino Recipe: Chicken Adobo.
+
+Step 2
+Created a Flask Application
+I made a new repository in github and installed Flask in my gitpod repository with: pip3 install flask
+
+Step 3
+Created a new python file: app.py
+Import Flask functionality and created flask app.
+
+Step 4: 
+Creating Heroku app and created connection with gitpod
+Create requirements.txt
+Create Procfile
+
+Step 5:
+Run the application in Heroku
+Specify IP adress and PORT in settings.
+IP: 0.0.0.0
+PORT: 5000
+I succesfully deployed app! :)
+
+Step 6: 
+Connected Flask to MongoDB Atlas
+Installed PyMongo: pip3 install flask-pymongo
+Installed: pip3 install dnspython
+
+Step 7: 
+
+**Credits**
+
+* Media: 
+
+**Acknowledgements**
+
+*I got inspiration from:*
+ 
+
+
+
+
