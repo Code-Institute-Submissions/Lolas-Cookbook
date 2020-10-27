@@ -100,6 +100,12 @@ Installed PyMongo: pip3 install flask-pymongo
 Installed: pip3 install dnspython
 
 Step 7: 
+Created a base.html and recipes.html in templates folder. 
+I used jinja blocks to inject content with {% block content %} insert content here {% endblock %}
+
+Step 8:
+Materialize setup front end framework
+
 
 **Credits**
 
