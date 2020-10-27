@@ -84,12 +84,12 @@ Import Flask functionality and created flask app.
 
 Step 4: 
 Creating Heroku app and created connection with gitpod
-Create requirements.txt
-Create Procfile
+Created requirements.txt
+Created Procfile
 
 Step 5:
-Run the application in Heroku
-Specify IP adress and PORT in settings.
+Run the application in Heroku with command: heroku ps:scale web=1
+Specify IP adress and PORT in settings in Heroku.
 IP: 0.0.0.0
 PORT: 5000
 I succesfully deployed app! :)
