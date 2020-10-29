@@ -17,6 +17,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/lolas_cookbook")
+def lolas_cookbook():
+    return render_template("index.html")
+
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -25,10 +29,6 @@ def get_recipes():
 @app.route("/add_recipes")
 def add_recipes():
     return render_template("add_recipes.html")
-
-@app.route("/lolas_cookbook")
-def lolas_cookbook():
-    return render_template("index.html")
 
 
 if __name__ == "__main__":
