@@ -20,7 +20,7 @@
       <a href="{{ url_for('get_recipes') }}" class="brand-logo">Lola's Cookbook</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="recipes.html">Add Recipe</a></li>
+        <li><a href="{{ url_for('add_recipes') }}">Add Recipe</a></li>
           <li><a href="browserecipes.html">Browse Recipes</a></li>
         <li><a href="mealplanner.html">Mealplanner</a></li>
       </ul>
@@ -33,7 +33,7 @@
   <ul class="sidenav" id="mobile-demo">
   <li><h4 class="center-align #ffb300 amber darken-1">Recipe Manager</h4></li>
   <li><a href="{{ url_for('get_recipes') }}">Lola's Cookbook</a></li>
-        <li><a href="recipes.html">Add Recipe</a></li>
+        <li><a href="{{ url_for('add_recipes') }}">Add Recipe</a></li>
           <li><a href="browserecipes.html">Browse Recipes</a></li>
         <li><a href="mealplanner.html">Mealplanner</a></li>
   </ul>
