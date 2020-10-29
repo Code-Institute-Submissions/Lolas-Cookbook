@@ -26,6 +26,10 @@ def get_recipes():
 def add_recipes():
     return render_template("add_recipes.html")
 
+@app.route("/lolas_cookbook")
+def lolas_cookbook():
+    return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
