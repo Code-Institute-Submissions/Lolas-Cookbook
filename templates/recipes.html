@@ -1,26 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for recipes in recipes %}
-        {{ recipes.recipe_name }}<br>
-        {{ recipes.recipe_description }}<br>
-        {{ recipes.recipe_ingredients }}<br>
-        {{ recipes.cooking_instruction }}<br>
-    {% endfor %}
 
 <ul class="collapsible">
+  {% for recipes in recipes %}
     <li>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
+      <strong>{{ recipes.recipe_name }}</strong> : {{ recipes.recipe_description }}
+      </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
     </li>
-    <li>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+  
+      {% endfor %}
   </ul>
         
 
