@@ -21,12 +21,14 @@ mongo = PyMongo(app)
 def lolas_cookbook():
     return render_template("index.html")
 
+
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
-@app.route("/add_recipes", methods-["GET", "POST"])
+
+@app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
     if request.method == "POST":
         recipes = {
@@ -39,9 +41,9 @@ def add_recipes():
         }
 
         mongo.db.recipes.insert_one(recipes)
-        flash("Recipe succesfully added")
+        flash("Your recipe is succesfully added")
         return redirect(url_for("get_recipes"))
-        
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
 
