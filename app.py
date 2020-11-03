@@ -28,7 +28,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/get_mealplanner")
+@app.route("/mealplanner")
 def get_mealplanner():
     return render_template("mealplanner.html")
 
@@ -52,8 +52,8 @@ def add_recipes():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
 
-    mealplanner_date = mongo.db.mealplanner_date.find().sort("recipe_day", 1)
-    return render_template("add_recipes.html", mealplanner_date=mealplanner_date)
+    mealplanner = mongo.db.mealplanner.find().sort("recipe_day", 1)
+    return render_template("add_recipes.html", mealplanner=mealplanner)
 
 
 if __name__ == "__main__":
