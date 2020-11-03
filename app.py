@@ -39,7 +39,6 @@ def add_recipes():
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "cooking_instruction": request.form.get("cooking_instruction")
         }
-
         mongo.db.recipes.insert_one(recipes)
         flash("Your recipe is succesfully added")
         return redirect(url_for("get_recipes"))
