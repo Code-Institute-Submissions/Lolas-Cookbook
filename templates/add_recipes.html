@@ -63,6 +63,20 @@
                     <label for="cooking_instruction">Cooking Instruction</label>
         </div>
 
+        <!-- Mealplanner choose Day-->
+   
+    <div class="row">
+    <div class="input-field col s12">
+     <i class="fas fa-folder-open prefix text-darken-4"></i>
+    <select id="recipe_day" name="recipe_day" class="validate" required>
+      <option value="" disabled selected>Mealplanner</option>
+      {% for date in recipe_day %}
+      <option value="{{ date.recipe_day }}">{{ date.recipe_day }}</option>
+    {% endfor %}
+    </select>
+    <label for="recipe_day">Choose a day</label>
+  </div>
+    </div>
 <div>
 
 <!-- submit button -->
