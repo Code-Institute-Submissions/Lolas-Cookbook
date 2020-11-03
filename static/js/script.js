@@ -1,3 +1,6 @@
+// Initializing the Materialize components with a function call, copied these codes from the Materialize website //
+
+
 $(document).ready(function(){
     $('.sidenav').sidenav();
   });
@@ -14,6 +17,8 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
+
+  // I used the code from the miniproject (building a task manager) that provides proper validation on select elements for Materialize //
   validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
