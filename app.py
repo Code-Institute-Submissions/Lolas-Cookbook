@@ -1,5 +1,7 @@
 import os
-from flask import Flask, flash, render_template, redirect, request, session, url_for
+from flask import (
+    Flask, flash, render_template,
+    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -47,7 +49,6 @@ def add_recipes():
             "family_story": request.form.get("family_story"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "cooking_instruction": request.form.get("cooking_instruction"),
-            "recipe_day": request.form.get("recipe_day")
         }
         mongo.db.recipes.insert_one(recipes)
         flash("Your recipe is succesfully added")
@@ -55,6 +56,26 @@ def add_recipes():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
+
+
+@app.route("/edit_recipes/<recipes_id>", methods=["GET", "POST"])
+def edit_recipes(recipes_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "family_story": request.form.get("family_story"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "cooking_instruction": request.form.get("cooking_instruction"),
+            "recipe_day": request.form.get("recipe_day")
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipes_id)}, submit)
+        flash("Recipe Successfully Updated")
+
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipes.html", recipes=recipes, categories=categories)
 
 
 @app.route("/add_mealplanner", methods=["GET", "POST"])
@@ -69,12 +90,6 @@ def add_mealplanner():
         flash("Your recipe is succesfully added to your mealplanner")
         return redirect(url_for("get_mealplanner"))
 
-
-@app.route("/edit_recipes/<recipes_id>", methods=["GET", "POST"])
-def edit_recipes(recipes_id):
-    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
-    recipes = mongo.db.recipes.find().sort("recipe_name", 1)
-    return render_template("edit_recipes.html", recipes=recipes)
 
 
 if __name__ == "__main__":
