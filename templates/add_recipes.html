@@ -26,36 +26,41 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-utensils prefix text-darken-4"></i>
-          <input id="name" type="text" class="validate">
-          <label for="name">Recipe name</label>
+          <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
+          type="text" class="validate">
+          <label for="recipe_name">Recipe name</label>
         </div>
 
     <!-- Recipe description-->
         <div class="input-field col s12">
          <i class="fas fa-clipboard prefix text-darken-4"></i>
-          <input id="description" type="text" class="validate">
-          <label for="description">Recipe Description</label>
+          <textarea id="recipe_description" name="recipe_description" minlength="5"
+                        maxlength="100" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_description">Recipe Description</label>
         </div>
 
     <!-- Family story-->
         <div class="input-field col s12">
          <i class="fas fa-smile-beam prefix text-darken-4"></i>
-          <input id="family_story" type="text" class="validate">
-          <label for="family_story">Family story</label>
+          <textarea id="family_story" name="family_story" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="family_story">Family Story</label>
         </div>
 
     <!-- Recipe Ingredients-->
         <div class="input-field col s12">
          <i class="fas fa-clipboard-list prefix text-darken-4"></i>
-          <input id="ingredients" type="list" class="validate">
-          <label for="ingredients">Recipe Ingredients</label>
+          <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
+                        maxlength="150" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_ingredients">Recipe Ingredients</label>
         </div>
 
     <!-- Cooking Instructions-->
         <div class="input-field col s12">
          <i class="fas fa-temperature-high prefix text-darken-4"></i>
-          <input id="instructions" type="text" class="validate">
-          <label for="instructions">Cooking Instructions</label>
+          <textarea id="cooking_instructions" name="cooking_instructions" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="cooking_instructions">Cooking Instructions</label>
         </div>
 
 <div>
