@@ -9,26 +9,54 @@
   {% for recipes in mealplanner %}
     <li>
       <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.Monday }}</strong> : {{ recipes.recipe_name }}
+      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
       </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
     <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.Tuesday }}</strong> : {{ recipes.recipe_name }}
+      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
       </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
       <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.Wednesday }}</strong> : {{ recipes.recipe_name }}
+      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
       </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
       <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.Thursday }}</strong> : {{ recipes.recipe_name }}
+      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
       </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
       <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.Friday }}</strong> : {{ recipes.recipe_name }}
+      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
       </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
       <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.Saturday }}</strong> : {{ recipes.recipe_name }}
+      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
       </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
       <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.Sunday }}</strong> : {{ recipes.recipe_name }}
+      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
       </div>
+      <div class="collapsible-body">
+      <strong>{{ recipes.recipe_ingredients }}</strong>
+      <p>{{ recipes.cooking_instruction }}</p>
+     </div>
     </li>
   
       {% endfor %}

@@ -52,6 +52,9 @@ def add_recipes():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
 
+    mealplanner_date = mongo.db.mealplanner_date.find().sort("recipe_day", 1)
+    return render_template("add_recipes.html", mealplanner_date=mealplanner_date)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

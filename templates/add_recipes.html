@@ -64,14 +64,15 @@
         </div>
 
         <!-- Mealplanner choose Day-->
-   
+   <div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('add_recipes') }}">
     <div class="row">
     <div class="input-field col s12">
      <i class="fas fa-folder-open prefix text-darken-4"></i>
     <select id="recipe_day" name="recipe_day" class="validate" required>
       <option value="" disabled selected>Mealplanner</option>
-      {% for date in recipe_day %}
-      <option value="{{ date.recipe_day }}">{{ date.recipe_day }}</option>
+      {% for recipe in mealplanner_date %}
+      <option value="{{ recipe.recipe_day }}">{{ recipe.recipe_day }}</option>
     {% endfor %}
     </select>
     <label for="recipe_day">Choose a day</label>
@@ -87,7 +88,6 @@
   </button>
         </div>
 
-      </div>
       </div>
       </div>
     </form>
