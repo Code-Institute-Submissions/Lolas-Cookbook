@@ -9,54 +9,33 @@
     <form class="col s12" method="POST" action="{{ url_for('add_mealplanner') }}">
 
 <!-- Recipe name -->
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="fas fa-utensils prefix text-darken-4"></i>
-          <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
-          type="text" class="validate">
-          <label for="recipe_name">Recipe Name</label>
-        </div>
-
-    <!-- Recipe description-->
-        <div class="input-field col s12">
-         <i class="fas fa-clipboard prefix text-darken-4"></i>
-          <textarea id="recipe_description" name="recipe_description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
-                    <label for="recipe_description">Day</label>
-        </div>
-
-       <!-- Mealplanner choose Day
 
     <div class="row">
     <div class="input-field col s12">
      <i class="fas fa-folder-open prefix text-darken-4"></i>
-    <select id="recipe_day" name="recipe_day" class="validate" required>
-      <option value="" disabled selected>Mealplanner</option>
-      {% for recipe_day in mealplanner %}
-      <option value="{{ recipe_day.recipe_day }}">{{ recipe_day.recipe_day }}</option>
-    {% endfor %}
-    </select>
-    <label for="recipe_day">Choose a day</label>
-  </div>
-    </div>
-<div>
-
-Choose a Recipe from database
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="fas fa-utensils prefix text-darken-4"></i>
-          <select id="recipe_day" name="recipe_day" class="validate" required>
-      <option value="" disabled selected>Recipe</option>
+    <select id="recipe_name" name="recipe_name" class="validate" required>
+      <option value="" disabled selected>Choose a recipe from your database</option>
       {% for recipe_name in recipes %}
-      <option value="{{ recipe_name.recipe_name }}">{{ recipe_name.recipe_name }}</option>
+      <option value="{{ recipes.recipe_name }}">{{ recipes.recipe_name }}</option>
     {% endfor %}
     </select>
-    <label for="recipe_day">Choose a Recipe</label>
+    <label for="recipe_name"></label>
   </div>
     </div>
-<div>
 
--->
+     <!-- Recipe category selection -->
+    <div class="row">
+    <div class="input-field col s12">
+     <i class="fas fa-folder-open prefix text-darken-4"></i>
+    <select id="recipe_day" name="recipe_day" class="validate" required>
+      <option value="" disabled selected>Choose a day in the week</option>
+      {% for recipe_day in mealplanner %}
+      <option value="{{ mealplanner.recipe_day }}">{{ mealplanner.recipe_day }}</option>
+    {% endfor %}
+    </select>
+    <label for="recipe_day"></label>
+  </div>
+    </div>
 
 <!-- submit button -->
 <div class="row">
@@ -72,66 +51,6 @@ Choose a Recipe from database
      </div>
 
 
-
-
-<!--
-<ul class="collapsible">
-  {% for recipes in mealplanner %}
-    <li>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      </div>
-      <div class="collapsible-body">
-      <strong>{{ recipes.recipe_ingredients }}</strong>
-      <p>{{ recipes.cooking_instruction }}</p>
-     </div>
-    <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      </div>
-      <div class="collapsible-body">
-      <strong>{{ recipes.recipe_ingredients }}</strong>
-      <p>{{ recipes.cooking_instruction }}</p>
-     </div>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      </div>
-      <div class="collapsible-body">
-      <strong>{{ recipes.recipe_ingredients }}</strong>
-      <p>{{ recipes.cooking_instruction }}</p>
-     </div>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      </div>
-      <div class="collapsible-body">
-      <strong>{{ recipes.recipe_ingredients }}</strong>
-      <p>{{ recipes.cooking_instruction }}</p>
-     </div>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      </div>
-      <div class="collapsible-body">
-      <strong>{{ recipes.recipe_ingredients }}</strong>
-      <p>{{ recipes.cooking_instruction }}</p>
-     </div>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      </div>
-      <div class="collapsible-body">
-      <strong>{{ recipes.recipe_ingredients }}</strong>
-      <p>{{ recipes.cooking_instruction }}</p>
-     </div>
-      <div class="collapsible-header #ffb300 amber darken-1"><i class="fas fa-caret-down"></i>
-      <strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      </div>
-      <div class="collapsible-body">
-      <strong>{{ recipes.recipe_ingredients }}</strong>
-      <p>{{ recipes.cooking_instruction }}</p>
-     </div>
-    </li>
-  
-      {% endfor %}
-  </ul>
-       --> 
 <ul class="collapsible">
   {% for recipes in mealplanner %}
     <li>
