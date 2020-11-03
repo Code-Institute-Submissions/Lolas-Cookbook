@@ -3,12 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 
 
-nav.nav-extended .nav-wrapper {
-    font-family: 'Baloo Tammudu 2', cursive;
-    min-height: 56px;
-    height: auto;
-}
-
 nav .brand-logo {
     position: absolute;
     color: #fff;
