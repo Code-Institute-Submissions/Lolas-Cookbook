@@ -30,10 +30,14 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/mealplanner")
+@app.route("/get_mealplanner")
 def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
     return render_template("mealplanner.html", mealplanner=mealplanner)
+
+@app.route("/meal_agenda")
+def meal_agenda():
+    return render_template("mealagenda.html")
 
 
 @app.route("/add_recipes", methods=["GET", "POST"])
@@ -81,16 +85,13 @@ def add_mealplanner():
     if request.method == "POST":
         mealplanner = {
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_description": request.form.get("recipe_description"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "cooking_instruction": request.form.get("cooking_instruction"),
+
             "recipe_day": request.form.get("recipe_day")
         }
         mongo.db.recipes.insert_one(recipe_name)
         flash("Your recipe is succesfully added to your mealplanner")
         return redirect(url_for("get_mealplanner"))
 
-    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
     recipes = mongo.db.recipes.find().sort("recipe_name", 1)
     return render_template("mealplanner.html", recipes=recipes)
 

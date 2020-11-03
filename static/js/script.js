@@ -17,6 +17,9 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
 
   // I used the code from the miniproject (building a task manager) that provides proper validation on select elements for Materialize //
   validateMaterializeSelect();
