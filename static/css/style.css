@@ -9,6 +9,15 @@ nav.nav-extended .nav-wrapper {
     height: auto;
 }
 
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    font-family: 'Tangerine', serif;
+}
+
 h1,
 h2,
 h3,
@@ -29,6 +38,8 @@ p {
 body {
     background-color: #ffffff;
     font-family: 'Playfair Display', serif;
+    padding-top: 4em;
+    padding-bottom: 5em;
 }
 
 .text-shadow {
