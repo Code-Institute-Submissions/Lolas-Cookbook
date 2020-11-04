@@ -4,68 +4,46 @@
 
 <h3 class= "text-darken-4 center-align">Mealplanner</h3>
 <div class="row card-panel grey lighten-5">
-	<form class="col s12" method="POST" action="{{ url_for('get_mealplanner') }}">
-		<!-- Recipe name -->
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="fas fa-folder-open prefix text-darken-4"></i>
-				<select id="recipe_name" name="recipe_name" class="validate" required>
-					<option value="" disabled selected>Choose Recipe</option>
-      {% for recipe in recipes %}
+    <form class="col s12" method="POST" action="{{ url_for('add_mealplanner') }}">
+        <!-- Recipe name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix text-darken-4"></i>
+                <select id="recipe_name" name="recipe_name" class="validate" required>
+                    <option value="" disabled selected>Choose Recipe</option>
+      {% for recipes in mealplanner %}
       
-					<option value="{{ recipe.recipe_name }}">{{ recipe.recipe_name }}</option>
+                    <option value="{{ recipes.recipe_name }}">{{ recipes.recipe_name }}</option>
     {% endfor %}
     
-				</select>
-				<label for="recipe_name">Choose a recipe from your database</label>
-			</div>
-		</div>
+                </select>
+                <label for="recipe_name">Choose a recipe from your database</label>
+            </div>
+        </div>
 
 <!-- Date Picker from Materialize-->
 
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="fas fa-table prefix text-darken-4"></i>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-table prefix text-darken-4"></i>
                      <input id="date_picker" name="date_picker" type="text" class="datepicker validate" reguired>
                     <label for="date_picker">Pick a date</label>
                 
-			</div>
-		</div>
-		
-
-		<!-- submit button -->
-		<div class="row">
-			<div class="col s12 center-align">
-				<button class="btn waves-effect waves-light" type="submit"> Add Recipe to Mealplanner
-    
-					<i class="fas fa-plus-square left"></i>
-				</button>
-			</div>
-		</div>
+            </div>
         </div>
-		</div>
-	</form>
-    </div>
-	<ul class="collapsible">
-  {% for recipes in mealplanner %}
+        
+
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light" type="submit"> Add Recipe to Mealplanner
     
-	<!--	<li>
-			<div class="collapsible-header #ffb300 amber darken-1">
-				<i class="fas fa-caret-down"></i>
-				<a href="{{ url_for('add_mealplanner', mealplanner_id=mealplanner._id) }}" class="btn-small red">Delete</a>
-			</div>
-			<strong>{{ mealplanner.recipe_day }}</strong> : {{ recipes.recipe_name }}
-      
-		</div>
-		<div class="collapsible-body">
-			<strong>{{ recipes.recipe_description }}</strong>
-			<p>{{ recipes.recipe_ingredients }}</p>
-			<p>{{ recipes.cooking_instruction }}</p>
-		</div>
-	</li>
-  
-      {% endfor %}
-  
-</ul> -->
+                    <i class="fas fa-plus-square left"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    </div>
+ 
 
 {% endblock %}

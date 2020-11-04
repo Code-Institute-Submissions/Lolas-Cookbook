@@ -33,7 +33,7 @@ def get_recipes():
 @app.route("/get_mealplanner")
 def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
-    return render_template("mealplanner.html", mealplanner=mealplanner)
+    return render_template("mealagenda.html", mealplanner=mealplanner)
 
 
 @app.route("/add_recipes", methods=["GET", "POST"])
@@ -79,17 +79,19 @@ def edit_recipes(recipes_id):
 @app.route("/add_mealplanner", methods=["GET", "POST"])
 def add_mealplanner():
     if request.method == "POST":
-        mealplanner = {
+        recipes = {
             "recipe_name": request.form.get("recipe_name"),
-
-            "recipe_day": request.form.get("recipe_day")
+            "date_picker": request.form.get("date_picker"),
+            "recipe_description": request.form.get("recipe_description"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "cooking_instruction": request.form.get("cooking_instruction"),
         }
-        mongo.db.recipes.insert_one(recipe_name)
+        mongo.db.mealplanner.insert_one(recipes)
         flash("Your recipe is succesfully added to your mealplanner")
         return redirect(url_for("get_mealplanner"))
 
-    recipes = mongo.db.recipes.find().sort("recipe_name", 1)
-    return render_template("add_mealplanner.html", recipes=recipes)
+    mealplanner = mongo.db.recipes.find().sort("recipe_name", 1)
+    return render_template("add_mealplanner.html", mealplanner=mealplanner)
 
 
 @app.route("/delete_recipes/<recipes_id>")
@@ -97,6 +99,13 @@ def delete_recipes(recipes_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipes_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
+
+
+@app.route('/delete_mealplanner/<recipes_id>')
+def delete_mealplanner(recipes_id):
+    mongo.db.mealplanner.delete_one({'_id': ObjectId(recipes_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("get_mealplanner"))
 
 
 if __name__ == "__main__":
