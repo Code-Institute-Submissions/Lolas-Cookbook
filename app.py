@@ -35,10 +35,6 @@ def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
     return render_template("mealplanner.html", mealplanner=mealplanner)
 
-@app.route("/meal_agenda")
-def meal_agenda():
-    return render_template("mealagenda.html")
-
 
 @app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
@@ -93,7 +89,7 @@ def add_mealplanner():
         return redirect(url_for("get_mealplanner"))
 
     recipes = mongo.db.recipes.find().sort("recipe_name", 1)
-    return render_template("mealplanner.html", recipes=recipes)
+    return render_template("add_mealplanner.html", recipes=recipes)
 
 
 @app.route("/delete_recipes/<recipes_id>")

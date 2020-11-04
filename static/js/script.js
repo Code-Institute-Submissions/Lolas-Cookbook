@@ -18,8 +18,14 @@ $(document).ready(function(){
   });
 
 $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
+    $(".datepicker").datepicker({
+        format: "dd mmmm, yyyy",
+        yearRange: 3,
+        showClearBtn: true,
+        i18n: {
+            done: "Select"
+        }
+    });
 
   // I used the code from the miniproject (building a task manager) that provides proper validation on select elements for Materialize //
   validateMaterializeSelect();
@@ -49,5 +55,6 @@ $(document).ready(function(){
             }
         });
     }
-
+}
+)
 
