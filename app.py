@@ -30,6 +30,12 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/get_view")
+def get_view():
+    recipes = list(mongo.db.recipes.find())
+    return render_template("view_recipe.html", recipes=recipes)
+
+
 @app.route("/get_mealplanner")
 def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
@@ -42,6 +48,7 @@ def add_recipes():
         recipes = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
+            "recipe_image": request.form.get("recipe_image"),
             "recipe_description": request.form.get("recipe_description"),
             "family_story": request.form.get("family_story"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
@@ -61,6 +68,7 @@ def edit_recipes(recipes_id):
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
+            "recipe_image": request.form.get("recipe_image"),
             "recipe_description": request.form.get("recipe_description"),
             "family_story": request.form.get("family_story"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
@@ -75,6 +83,11 @@ def edit_recipes(recipes_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipes.html", recipes=recipes, categories=categories)
 
+# Route to view_recipe page, providing data for the selected recipe
+@app.route("/view_recipes/<recipes_id>")
+def view_recipes(recipes_id):
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
+    return redirect(url_for("get_view"))
 
 @app.route("/add_mealplanner", methods=["GET", "POST"])
 def add_mealplanner():
@@ -82,9 +95,7 @@ def add_mealplanner():
         recipes = {
             "recipe_name": request.form.get("recipe_name"),
             "date_picker": request.form.get("date_picker"),
-            "recipe_description": request.form.get("recipe_description"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "cooking_instruction": request.form.get("cooking_instruction"),
+
         }
         mongo.db.mealplanner.insert_one(recipes)
         flash("Your recipe is succesfully added to your mealplanner")
