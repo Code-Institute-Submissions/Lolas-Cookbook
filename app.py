@@ -41,7 +41,7 @@ def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
     return render_template("mealagenda.html", mealplanner=mealplanner)
 
-
+# Route to add_recipes page, so I can add my recipes in my database
 @app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
     if request.method == "POST":
@@ -61,7 +61,7 @@ def add_recipes():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
 
-
+# Route to edit_recipes.html to edit my recipe and update the new information in my recipes database
 @app.route("/edit_recipes/<recipes_id>", methods=["GET", "POST"])
 def edit_recipes(recipes_id):
     if request.method == "POST":
@@ -89,6 +89,7 @@ def view_recipes(recipes_id):
     recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
     return redirect(url_for("get_view"))
 
+# Route to my mealplanner. You can add a meal to your mealplanner agenda by picking a recipe name from the recipes database and pick a date
 @app.route("/add_mealplanner", methods=["GET", "POST"])
 def add_mealplanner():
     if request.method == "POST":
@@ -104,14 +105,14 @@ def add_mealplanner():
     mealplanner = mongo.db.recipes.find().sort("recipe_name", 1)
     return render_template("add_mealplanner.html", mealplanner=mealplanner)
 
-
+# Route to delete a recipe
 @app.route("/delete_recipes/<recipes_id>")
 def delete_recipes(recipes_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipes_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
-
+# Route to delete a meal from my mealagenda
 @app.route('/delete_mealplanner/<recipes_id>')
 def delete_mealplanner(recipes_id):
     mongo.db.mealplanner.delete_one({'_id': ObjectId(recipes_id)})
