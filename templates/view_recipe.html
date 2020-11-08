@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     
-    <!-- Creates a recipe card for each recipe by iterating through database collection based on selected category -->
-{% for recipes in recipes %}
+    <!-- Creates a recipe card for the recipe chosen in the mealplanner to view -->
+{% for recipes in view_recipe %}
 
         <div class="card mb-4">
             <div class="card-body">

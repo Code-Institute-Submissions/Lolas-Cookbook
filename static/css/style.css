@@ -17,3 +17,26 @@
     line-height: 42px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+p {
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      

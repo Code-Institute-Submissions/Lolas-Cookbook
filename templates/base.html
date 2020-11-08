@@ -15,7 +15,7 @@
 <body>
 <header>
 <!--top nav bar materialize-->
-<nav class ="nav-extended text-shadow #ffb300 amber darken-1">
+<nav class ="nav-extended text-shadow #424242 grey darken-3">
     <div class="nav-wrapper">
       <a href="{{ url_for('lolas_cookbook') }}" class="brand-logo">Lola's Cookbook</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
@@ -32,7 +32,7 @@
 <!--mobile side nav bar materialize-->
 
   <ul class="sidenav" id="mobile-demo">
-  <li><h4 class="center-align #ffb300 amber darken-1">Recipe Manager</h4></li>
+  <li><h4 class="center-align #424242 grey darken-3">Recipe Manager</h4></li>
   <li><a href="{{ url_for('lolas_cookbook') }}">Lola's Cookbook</a></li>
         <li><a href="{{ url_for('add_recipes') }}">Add Recipe</a></li>
           <li><a href="{{ url_for('get_recipes') }}">Browse Recipes</a></li>
@@ -58,11 +58,19 @@
         {% endblock %}
     </main>
     <!-- Footer -->
-    <footer class="footer py-2">
-        <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Lola's Cookbook 2020</p>
-        </div>
-    </footer>
+
+
+<footer class="page-footer #424242 grey darken-3">
+          <div class="container">
+            <div class="row">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Copyright: Marjolein van Leeuwen
+            </div>
+          </div>
+        </footer>
+            
+
 
  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
