@@ -9,7 +9,7 @@
     <form class="col s12" method="POST" action="{{ url_for('edit_recipes', recipes_id=recipes._id) }}">
 
 
-    <!-- Recipe category selection -->
+    <!-- Edit data in recipe category selection -->
     <div class="row">
     <div class="input-field col s12">
      <i class="fas fa-folder-open prefix text-darken-4"></i>
@@ -27,7 +27,7 @@
   </div>
     </div>
 
-    <!-- Recipe name -->
+    <!-- Edit data in recipe name -->
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-utensils prefix text-darken-4"></i>
@@ -36,7 +36,7 @@
           <label for="recipe_name">Recipe name</label>
         </div>
 
-    <!-- Recipe description-->
+    <!-- Edit data in Recipe description-->
         <div class="input-field col s12">
          <i class="fas fa-clipboard prefix text-darken-4"></i>
           <textarea id="recipe_description" name="recipe_description" minlength="5"
@@ -46,7 +46,7 @@
                     <label for="recipe_description">Recipe Description</label>
         </div>
 
-<!-- Recipe image-->
+<!-- Edit data in Recipe image-->
  <div class="row">
                     <div class="input-field col s12">
                     <i class="far fa-images prefix text-darken-4"></i><label class="form-field-description"></label>
@@ -54,7 +54,7 @@
                     <label for="recipe_image">Recipe image</label>
                     </div>
 
-    <!-- Family story-->
+    <!-- Edit data in Family story-->
         <div class="input-field col s12">
          <i class="fas fa-smile-beam prefix text-darken-4"></i>
           <textarea id="family_story" name="family_story" minlength="5"
@@ -62,7 +62,7 @@
                     <label for="family_story">Family Story</label>
         </div>
 
-    <!-- Recipe Ingredients-->
+    <!-- Edit data in Recipe Ingredients-->
         <div class="input-field col s12">
          <i class="fas fa-clipboard-list prefix text-darken-4"></i>
           <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
@@ -70,7 +70,7 @@
                     <label for="recipe_ingredients">Recipe Ingredients</label>
         </div>
 
-    <!-- Cooking Instruction-->
+    <!-- Edit data in Cooking Instruction-->
         <div class="input-field col s12">
          <i class="fas fa-temperature-high prefix text-darken-4"></i>
           <textarea id="cooking_instruction" name="cooking_instruction" minlength="5"
