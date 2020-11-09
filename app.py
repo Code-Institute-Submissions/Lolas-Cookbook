@@ -41,6 +41,14 @@ def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
     return render_template("mealagenda.html", mealplanner=mealplanner)
 
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 # Route to add_recipes page, so I can add my recipes in my database
 @app.route("/add_recipes", methods=["GET", "POST"])
 def add_recipes():
