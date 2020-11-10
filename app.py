@@ -69,7 +69,7 @@ def add_recipes():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipes.html", categories=categories)
 
-# Route to edit_recipes.html to edit my recipe and update the new information in my recipes database
+# Route to edit_recipes.html to edit my recipe and update the new information recipes database
 @app.route("/edit_recipes/<recipes_id>", methods=["GET", "POST"])
 def edit_recipes(recipes_id):
     if request.method == "POST":
@@ -92,8 +92,8 @@ def edit_recipes(recipes_id):
     return render_template("edit_recipes.html", recipes=recipes, categories=categories)
 
 # Route to view_recipe page, providing data for the selected recipe
-@app.route("/view_recipes/<recipes_id>")
-def view_recipes(recipes_id):
+@app.route("/view_recipe/<recipes_id>")
+def view_recipe(recipes_id):
     recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
     return redirect(url_for("get_view"))
 
