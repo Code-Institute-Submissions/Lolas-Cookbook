@@ -1,23 +1,25 @@
 // Initializing the Materialize components with a function call, copied these codes from the Materialize website //
 
-
+// Materialize right aligned navbar initialization with jQuery
 $(document).ready(function(){
     $('.sidenav').sidenav();
   });
-  
+ //Materialize Mobile collapse button initialization with jQuery
     $(document).ready(function(){
     $('.collapsible').collapsible();
   });
 
-
+// Materialize Images carrousel initialization with jQuery
   $('.carousel.carousel-slider').carousel({
     fullWidth: true
   });
 
+  // initializing the select category (breakfast, lunch, dinner and dessert)
     $(document).ready(function(){
     $('select').formSelect();
   });
 
+  // Materialize datepicker initializing with JQuery
 $(document).ready(function(){
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
@@ -28,7 +30,7 @@ $(document).ready(function(){
         }
     });
 
-  // I used the code from the miniproject (building a task manager) that provides proper validation on select elements for Materialize //
+  // I used this code from the miniproject (building a task manager) that provides proper validation on select elements for Materialize //
   validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };

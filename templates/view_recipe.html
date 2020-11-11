@@ -2,7 +2,8 @@
 {% block content %}
     
     <!-- Creates a recipe card for the recipe chosen in the mealplanner to view -->
-{% for recipe in view_recipe %}
+{% for recipes in view_recipe %}
+
 
 <div class="col s12" method="POST" action="{{ url_for('view_recipe', recipes_id=recipes._id) }}">
         <div class="card mb-4">

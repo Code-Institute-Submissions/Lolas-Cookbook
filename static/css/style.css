@@ -3,8 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 
+
 .brand-logo {
     font-family: 'Dancing Script', cursive;
+}
+
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.carousel carousel-slider, h2 {
+    width: 100%;
 }
 
 .text-shadow {
@@ -16,23 +30,22 @@
     font-family: 'Baloo Tammudu 2', cursive;
 }
 
-.collapsible-header .col strong {
-    margin: 5px;
-    line-height: 42px;
-}
-
 h4,
 h5,
 h6 {
     font-family: 'Baloo Tammudu 2', cursive;
 }
 
-h3 {
+h2, h3 {
     font-family: 'Dancing Script', cursive; 
 }
 
 p {
     font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.carousel .carousel-item>img {
+    width: 112%;
 }
 
   body {
@@ -43,9 +56,27 @@ p {
 
   main {
     flex: 1 0 auto;
+  }   
+
+  col s12 {
+      font-family: 'Baloo Tammudu 2', cursive;
+      padding-left:5px;
   }
 
-  .col s12 {
-      font-family: 'Baloo Tammudu 2', cursive;
-  }
-      
+  .col .row {
+    margin-left: 2.25rem;
+    margin-right: 1.25rem;
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+img {
+    border-style: none;
+    padding-top: 15px;
+}
+          

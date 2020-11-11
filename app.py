@@ -33,7 +33,7 @@ def get_recipes():
 @app.route("/get_view")
 def get_view():
     view_recipe = list(mongo.db.recipes.find())
-    return render_template("view_recipe.html", view_recipe=view_recipe, recipes=recipes)
+    return render_template("view_recipe.html", view_recipe=view_recipe)
 
 
 @app.route("/get_mealplanner")
