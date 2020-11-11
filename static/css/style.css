@@ -21,13 +21,14 @@
     line-height: 42px;
 }
 
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
     font-family: 'Baloo Tammudu 2', cursive;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive; 
 }
 
 p {
@@ -42,5 +43,9 @@ p {
 
   main {
     flex: 1 0 auto;
+  }
+
+  .col s12 {
+      font-family: 'Baloo Tammudu 2', cursive;
   }
       
