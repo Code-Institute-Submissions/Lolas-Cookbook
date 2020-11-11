@@ -2,10 +2,11 @@ Lola’s Cookbook - Recipe Manager
 ---------------------------------------
 **Data Centric Development - Marjolein van Leeuwen**
 
-This is my Data Centric Development project. 
-I created Lola’s Cookbook for myself as a repice manager so I could store my family’s recipes. I have called it Lola’s cookbook, because we always called my mother Lola and she had a real talent in Filipino cooking. I also created a mealplanner, so I can organize my favorite meals.
+This is my Data Centric Development project. It's my 3rd milestone project for Code Institute.
+I created Lola’s Cookbook for myself as a recipe manager so I could store my family’s recipes. I have called it Lola’s cookbook, because we always called my mother Lola and she had a real talent in Filipino cooking. I also created a mealplanner, so I can organize my favorite meals.
 
-Click [here][DEMO] for my deployed project.
+Click [here][DEMO] for my deployed project on Github.
+Click [here][DEMO] for my deployed project hosted on Heroku.
 
 ![Lola's Cookbook demo](assets/images/cookbook.gif)
 
@@ -22,9 +23,9 @@ The ideal user:
 
 **Strategy**
 
-* The goal of the website is to provide visitors the option the create their own database of family recipes and organize them in a mealplanner.
+* The goal of the website is to provide the visitor the option to create their own database of family recipes and organize them in a mealplanner.
 * The websites focuses on 4 main categories of recipes: Breakfast, Lunch, Dinner & Dessert. 
-* Users are allowed to both edit/update recipes based on their experience when preparing the meal but also delete unwanted recipes. For the delete button a strong red color was used as a warning color. The edit button is a blue bolor.
+* The user is allowed to both edit/update recipes based on their experience when preparing the meal but also delete unwanted recipes. For the delete button a red color was used as a warning color. The edit button is a blue color.
 * The add recipe form displays placeholder text in all of the formfields to give the user instructions for easier input.
 * The edit recipe form is pre-populated with the recipe information that is pulled from the database.
 
@@ -32,10 +33,6 @@ The ideal user:
 
 * The database chosen for this is a non-relational database hosted on MongoDB.
 * The web application uses 3 database collections, 'categories', 'recipes' and 'mealplanner'.
-
-**Structure**
-
-* 
 
 **Skeleton** 
 
@@ -49,11 +46,12 @@ I created a wireframe using the program “Mockflow”. 
 **Surface**
 
 * For the surface plane I wanted the design to be minimilistic.
-* The colors are ...........
-* I choose the Lato google font........
-* Lola's cookbook logo.......
+* The colors of my website are dark grey and white
+* The images carrousel is in color, so the cuisine pictures are more appealing to the eye.
 * My images carroussel on the homepage is build with materialize code and is also touch compatible. 
 * The images are pictures of Philipino Cuisine
+* I choose the [Baloo+Tammadu][2] google font for my text on the website.
+* Lola's cookbook brand-logo is written in the font [Dancing Script][3], because it looks like the handwriting of my mom lola.
 
 **Technologies**
 
@@ -84,15 +82,44 @@ I created a wireframe using the program “Mockflow”. 
 The website has been built with a mobile-first approach and is responsive.
 This is achieved by using the front end framework from Materialize and custom-written css.
 
-* CRUD functions *
+**CRUD functions**
 
-* Users can add their favorite family recipes to the database. (Create)
+***Users can add their favorite family recipes to the database and add a recipe with the mealplanner to their mealagenda. (Create)***
 
-* Users can browse through all recipes contained in the database. (Read)
+ADD RECIPES
+* The Select Category field allows the user to select a category for the recipe. 
+* The Recipe Name field allows the user to add a name/title of the recipe.
+* The Recipe Image field allows the user to add a image link to the recipe image. 
+* The Recipe Description allows users to write something short about the recipe.
+* I added the family story, so it allows you to share the story behind the recipe and what memories it brings along.
+* The Ingredients field allows the user to enter recipe ingredients. 
+* The Cooking Instructions field allows the user to enter recipe instructions. 
 
-* Users can edit recipes in the database. (Update)
+MEALPLANNER
+* The select recipe field allows the user to acces all the recipes stored in your recipes database and select a recipe.
+* The datepicker field allows the user to select a date from an interactive calender.
 
-* Users can delete recipes in the database. (Delete)
+The add recipes and mealplanner forms uses front-end materialize validation to make sure the user completes all mandatory formfields.
+
+***Users can browse and search through all recipes contained in the database. (Read)***
+
+BROWSE RECIPES
+* Users can select to browse and search through all stored recipes by using the search bar. It allows the user to Reset and Search the Recipes.
+* The recipes page displays a minimized view of all recipes (recipe cards) contained in the applicable category in the database (Title, Image, Description).
+* On the Browse Recipes page, the user can select a specific recipe by clicking on the 'view' button and is then presented with a full-page view of the recipe and all its details.
+
+MEAL AGENDA
+* The meal agenda page shows all the recipe names and dates you added with the mealplanner. As a user you can choose to view the recipe from your mealagenda.
+
+***Users can edit recipes in the database. (Update) ***
+
+* The Browse recipes page allows the user to edit a specific recipe by clicking on the 'edit' button. This takes the user to a form that is pre-populated with the recipe information which the user then can use to update the recipe. Once the user is done with editing the Recipe, the user can choose to cancel the edit or continue with updating the Recipe.
+
+***Users can delete recipes in the database. (Delete) ***
+
+* The browse recipes page allows the user to immediately delete the recipe from the database.
+* The mealagenda page allows the user to delete the recipe + date.
+
 
 **Testing**
 
@@ -150,7 +177,9 @@ Media
 The recipe images used accross the page were obtained from Google Images.
 
 The recipes that I've added to the database in order to display the functionality of the application are borrowed from:
-*
+* [Chicken Adobo][5] recipe from tastingtable.com
+* [Pancit][6] recipe from stemandspoon.com
+* [Majablanca][7] recipe from wikiwand.com
 
 **Acknowledgements**
 
@@ -158,15 +187,15 @@ The recipes that I've added to the database in order to display the functionalit
  
 
 [DEMO]: <https://sweetzia.github.io/Lolas_cookbook/index.html>
-[0]: <https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw>
-[1]: <https://kenney.nl/>
-[2]: <https://pngtree.com/freepng/hand-drawn-cartoon-bacteria-virus-microbe-corona-virus-image_5334155.html>
-[3]: <https://nl.wikipedia.org/wiki/Space_Invaders>
-[4]: <https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard>
-[5]: <https://www.youtube.com/watch?v=XmqAPQsc1n4&t=3465s>
-[6]: <https://www.youtube.com/watch?v=kSt2_YZzCec>
-[7]: <https://codepen.io/kocsten/pen/rggjXp>
-[8]: <https://www.youtube.com/watch?v=9TcU2C1AACw>
+[0]: <https://>
+[1]: <https://>
+[2]: <https://https://fonts.google.com/specimen/Baloo+Tammudu+2?sidebar.open=true&selection.family=Baloo+Tammudu+2>
+[3]: <https://https://fonts.google.com/specimen/Dancing+Script?sidebar.open=true&selection.family=Dancing+Script:wght@600>
+[4]: <https://>
+[5]: <https://tastingtable.com>
+[6]: <https://stemandspoon.com/>
+[7]: <https://wikiwand.com>
+
 
 
 
