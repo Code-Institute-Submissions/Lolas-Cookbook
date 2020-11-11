@@ -7,11 +7,14 @@ I created Lola’s Cookbook for myself as a repice manager so I could store my f
 
 Click [here][DEMO] for my deployed project.
 
+![Lola's Cookbook demo](assets/images/cookbook.gif)
+
 **User stories**
 
 * As a user : As a new visitor to Lola's cookbook, I want the page to be easily navigated.
 * As a user: As a new visitor I want clear instructions on how to add, view, update and delete recipes.
 * As a user: I want a cookbook web app that responds quickly to my interaction.
+* As a user: I want a search option so I can quickly find the recipe I'd like.
 * As a user: I would like to easily organize my meals using the mealplanner
 
 The ideal user:
@@ -22,7 +25,7 @@ The ideal user:
 * The goal of the website is to provide visitors the option the create their own database of family recipes and organize them in a mealplanner.
 * The websites focuses on 4 main categories of recipes: Breakfast, Lunch, Dinner & Dessert. 
 * Users are allowed to both edit/update recipes based on their experience when preparing the meal but also delete unwanted recipes. For the delete button a strong red color was used as a warning color. The edit button is a blue bolor.
-* The add recipe form displays placeholder text in all formfields to give the user instructions for easier input.
+* The add recipe form displays placeholder text in all of the formfields to give the user instructions for easier input.
 * The edit recipe form is pre-populated with the recipe information that is pulled from the database.
 
 **Database**
@@ -38,7 +41,10 @@ The ideal user:
 
 I created a wireframe using the program “Mockflow”. 
 
-![Wireframe]()
+![Wireframe1](static/wireframe/Wireframe1.png)
+![Wireframe2](static/wireframe/Wireframe4.png)
+![Wireframe3](static/wireframe/Wireframe3.png)
+![Wireframe4](static/wireframe/Wireframe2.png)
 
 **Surface**
 
@@ -148,8 +154,19 @@ The recipes that I've added to the database in order to display the functionalit
 
 **Acknowledgements**
 
-*I want to thank my mentor Brian M for guiding me through the process of creating my own online cookbook and mealplanner.
+***I want to thank my mentor Brian M for guiding me through the process of creating my own online cookbook and mealplanner.***
  
+
+[DEMO]: <https://sweetzia.github.io/Lolas_cookbook/index.html>
+[0]: <https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw>
+[1]: <https://kenney.nl/>
+[2]: <https://pngtree.com/freepng/hand-drawn-cartoon-bacteria-virus-microbe-corona-virus-image_5334155.html>
+[3]: <https://nl.wikipedia.org/wiki/Space_Invaders>
+[4]: <https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard>
+[5]: <https://www.youtube.com/watch?v=XmqAPQsc1n4&t=3465s>
+[6]: <https://www.youtube.com/watch?v=kSt2_YZzCec>
+[7]: <https://codepen.io/kocsten/pen/rggjXp>
+[8]: <https://www.youtube.com/watch?v=9TcU2C1AACw>
 
 
 

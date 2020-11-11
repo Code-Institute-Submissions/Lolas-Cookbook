@@ -92,10 +92,10 @@ def edit_recipes(recipes_id):
     return render_template("edit_recipes.html", recipes=recipes, categories=categories)
 
 # Route to view_recipe page, providing data for the selected recipe
-@app.route("/view_recipe/<recipes_id>")
-def view_recipe(recipes_id):
-    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
-    return redirect(url_for("get_view"))
+@app.route("/view_recipe/<recipe_id>")
+def view_recipe(recipe_id):
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return redirect(url_for("get_view", recipe=recipe))
 
 
 # Route to my mealplanner. You can add a meal from your database to your mealplanner agenda +pick a date
