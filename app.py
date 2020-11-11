@@ -39,7 +39,7 @@ def get_view():
 @app.route("/get_mealplanner")
 def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
-    return render_template("mealagenda.html", mealplanner=mealplanner)
+    return render_template("add_mealplanner.html", mealplanner=mealplanner)
 
 
 @app.route("/search", methods=["GET", "POST"])

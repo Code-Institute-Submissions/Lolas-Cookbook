@@ -111,15 +111,19 @@ BROWSE RECIPES
 MEAL AGENDA
 * The meal agenda page shows all the recipe names and dates you added with the mealplanner. As a user you can choose to view the recipe from your mealagenda.
 
-***Users can edit recipes in the database. (Update) ***
+***Users can edit recipes in the database. (Update)***
 
 * The Browse recipes page allows the user to edit a specific recipe by clicking on the 'edit' button. This takes the user to a form that is pre-populated with the recipe information which the user then can use to update the recipe. Once the user is done with editing the Recipe, the user can choose to cancel the edit or continue with updating the Recipe.
 
-***Users can delete recipes in the database. (Delete) ***
+***Users can delete recipes in the database. (Delete)***
 
 * The browse recipes page allows the user to immediately delete the recipe from the database.
-* The mealagenda page allows the user to delete the recipe + date.
+* The mealagenda page allows the user to delete the recipe + date from their planning.
 
+**Challenges**
+
+* Building my mealplanner and meal agenda on one page was a difficulty for me. So I decided to first build 2 seperate pages: a mealplanner and a mealagenda. After I got the code for both pages work succesfully, I combined the two pages together in one page.
+* Writing the code to view my recipe on a full page failed and after struggling with the code, I asked my mentor for help. 
 
 **Testing**
 
