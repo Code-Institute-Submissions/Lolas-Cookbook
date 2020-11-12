@@ -5,7 +5,6 @@ Lola’s Cookbook - Recipe Manager
 This is my Data Centric Development project. It's my 3rd milestone project for Code Institute.
 I created Lola’s Cookbook for myself as a recipe manager so I could store my family’s recipes. I have called it Lola’s cookbook, because we always called my mother Lola and she had a real talent in Filipino cooking. I also created a mealplanner, so I can organize my favorite meals.
 
-Click [here][DEMO] for my deployed project on Github.
 Click [here][DEMO] for my deployed project hosted on Heroku.
 
 ![Lola's Cookbook demo](assets/images/cookbook.gif)
@@ -143,13 +142,13 @@ Testing problems I encountered:
 
 Going forward I would like to implement the following features:
 
-* Storing user data: Storing user data (username) for each recipe, connecting the recipe to the user that created it.
 * Login and registration feature: Enabling users to create an account and log in.
+* Storing user data: Storing user data (username) for each recipe, connecting the recipe to the user that created it.
 * Rating feature: Enabling users to vote on recipes.
 
 **Deployment**
 
-The project is stored in a GitHub repository and hosted on Heroku.
+The project is stored in a [GitHub repository][4] and hosted on Heroku.
 
 I followed the next steps to deploy my game on the GitHub pages:
 
@@ -158,7 +157,7 @@ I followed the next steps to deploy my game on the GitHub pages:
 * Go to Settings
 * Scroll down to the GitHub Pages section.
 * Select the Master Branch
-* On selecting Master Branch the page is automatically refreshed, lola's cookbook is deployed.
+* On selecting Master Branch the page is automatically refreshed.
 * The link can be retrieved to the deployed website.
 
 I followed the next steps to host lola's cookbook on Heroku:
@@ -174,31 +173,33 @@ I followed the next steps to host lola's cookbook on Heroku:
 
 **Credits**
 
-Content
+**Content**
+
 All of the text content on the website was written by me.
 
-Media
-The recipe images used accross the page were obtained from Google Images.
+**Media**
 
-The recipes that I've added to the database in order to display the functionality of the application are borrowed from:
-* [Chicken Adobo][5] recipe from tastingtable.com
-* [Pancit][6] recipe from stemandspoon.com
-* [Majablanca][7] recipe from wikiwand.com
+The recipe images used accross the page were obtained from Google Images.
 
 **Acknowledgements**
 
+I got inspiration from:
+
+* The [VeggiePedia][8] example project from Code Institute
+* The Data Centric Development mini project: building a taskmanager application
+
 ***I want to thank my mentor Brian M for guiding me through the process of creating my own online cookbook and mealplanner.***
  
-
-[DEMO]: <https://sweetzia.github.io/Lolas_cookbook/index.html>
+[DEMO]: <https://lolasrecipemanager.herokuapp.com/>
 [0]: <https://>
 [1]: <https://>
 [2]: <https://https://fonts.google.com/specimen/Baloo+Tammudu+2?sidebar.open=true&selection.family=Baloo+Tammudu+2>
 [3]: <https://https://fonts.google.com/specimen/Dancing+Script?sidebar.open=true&selection.family=Dancing+Script:wght@600>
-[4]: <https://>
+[4]: <https://github.com/Sweetzia/Lolas-Recipe-Manager>
 [5]: <https://tastingtable.com>
 [6]: <https://stemandspoon.com/>
 [7]: <https://wikiwand.com>
+[8]: <https://github.com/3PU/cook-book-milestone-project>
 
 
 
