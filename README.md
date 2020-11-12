@@ -7,7 +7,7 @@ I created Lola’s Cookbook for myself as a recipe manager so I could store my f
 
 Click [here][DEMO] for my deployed project hosted on Heroku.
 
-![Lola's Cookbook](static/images/lolas%20cookbook.png)
+![Lola's Cookbook](static/images/lolas%20cookbook%20macbook.jpg)
 
 **User stories**
 
@@ -24,7 +24,7 @@ The ideal user:
 
 * The goal of the website is to provide the visitor the option to create their own database of family recipes and organize them in a mealplanner.
 * The websites focuses on 4 main categories of recipes: Breakfast, Lunch, Dinner & Dessert. 
-* The user is allowed to both edit/update recipes based on their experience when preparing the meal but also delete unwanted recipes. For the delete button a red color was used as a warning color. The edit button is a blue color.
+* The user is allowed to both edit/update recipes based on their experience when preparing the meal but also delete unwanted recipes. 
 * The add recipe form displays placeholder text in all of the formfields to give the user instructions for easier input.
 * The edit recipe form is pre-populated with the recipe information that is pulled from the database.
 
@@ -112,22 +112,25 @@ MEAL AGENDA
 
 ***Users can edit recipes in the database. (Update)***
 
+EDIT RECIPES
 * The Browse recipes page allows the user to edit a specific recipe by clicking on the 'edit' button. This takes the user to a form that is pre-populated with the recipe information which the user then can use to update the recipe. Once the user is done with editing the Recipe, the user can choose to cancel the edit or continue with updating the Recipe.
 
 ***Users can delete recipes in the database. (Delete)***
 
+DELETE RECIPES
 * The browse recipes page allows the user to immediately delete the recipe from the database.
 * The mealagenda page allows the user to delete the recipe + date from their planning.
 
 **Challenges**
 
-* Building my mealplanner and meal agenda on one page was a difficulty for me. So I decided to first build 2 seperate pages: a mealplanner and a mealagenda. After I got the code for both pages work succesfully, I combined the two pages together in one page.
+* Building my mealplanner and meal agenda on one page was a difficulty for me. So I decided to first build 2 seperate pages: a mealplanner and a mealagenda. After I got the code for both pages work succesfully, I combined the two pages together in one page. But as a result my python code did not work properly and I could not get a correct connection with my recipes database. So I changed it all back to two seperate pages.
 * Writing the code to view my recipe on a full page failed and after struggling with the code, I asked my mentor for help. 
 
 **Testing**
 
-* All testing carried out was done manually.
+**All testing carried out was done manually**
 Testing problems I encountered:
+* I was not able to view my recipe on a full page.
 
 * Code Validation
 
@@ -179,14 +182,16 @@ All of the text content on the website was written by me.
 
 **Media**
 
-The recipe images used accross the page were obtained from Google Images.
+* The recipe images used accross the page were obtained from Google Images.
+* The carrousel images (philipino cuisine) were made by the photografers: Alex Lau and Stephanie Breijo
+* The Macbook photo in my README.md was made by Ben Kolde from Unsplash and adjusted with a picture from my website with Pixlr.com.
 
 **Acknowledgements**
 
 I got inspiration from:
 
 * The [VeggiePedia][8] example project from Code Institute
-* The Data Centric Development mini project: building a taskmanager application
+* The Data Centric Development mini project from the Code Institute Course: building a taskmanager application
 
 ***I want to thank my mentor Brian M for guiding me through the process of creating my own online cookbook and mealplanner.***
  

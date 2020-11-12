@@ -28,6 +28,7 @@ nav .brand-logo {
 .btn-small {
     margin: 5px;
     font-family: 'Baloo Tammudu 2', cursive;
+    line-height: 36px;
 }
 
 h1,
@@ -50,7 +51,7 @@ p {
     width: 112%;
 }
 
-  body {
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -82,6 +83,10 @@ img {
     padding-top: 15px;
 }
 
+.card {
+    padding-bottom: 1em;
+}
+
 .row .col.s12 {
     width: 100%;
     margin-left: auto;
@@ -92,6 +97,6 @@ img {
 
 .footer-copyright {
     font-family: 'Baloo Tammudu 2', cursive;
-    text-align: center;
+        margin-left: 11em;
 }
           
