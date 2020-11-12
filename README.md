@@ -45,7 +45,7 @@ I created a wireframe using the program “Mockflow”. 
 **Surface**
 
 * For the surface plane I wanted the design to be minimilistic.
-* The colors of my website are dark grey and white
+* The colors of my website are black, white, #efebe9 brown lighten-5 and #8d6e63 brown lighten-1
 * The images carrousel is in color, so the cuisine pictures are more appealing to the eye.
 * My images carroussel on the homepage is build with materialize code and is also touch compatible. 
 * The images are pictures of Philipino Cuisine
