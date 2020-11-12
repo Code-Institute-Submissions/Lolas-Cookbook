@@ -80,4 +80,17 @@ img {
     border-style: none;
     padding-top: 15px;
 }
+
+.row .col.s12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+     font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.footer-copyright {
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: center;
+}
           
