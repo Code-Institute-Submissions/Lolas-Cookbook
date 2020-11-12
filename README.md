@@ -7,7 +7,7 @@ I created Lola’s Cookbook for myself as a recipe manager so I could store my f
 
 Click [here][DEMO] for my deployed project hosted on Heroku.
 
-![Lola's Cookbook](static/images/lola%27s%20cookbook.png)
+![Lola's Cookbook](static/images/lolas%20cookbook.png)
 
 **User stories**
 
