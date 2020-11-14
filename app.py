@@ -23,11 +23,13 @@ mongo = PyMongo(app)
 def lolas_cookbook():
     return render_template("index.html")
 
+
 # Route to recipes page
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
+
 
 # Route to mealagenda page
 @app.route("/get_mealplanner")
@@ -35,7 +37,8 @@ def get_mealplanner():
     mealplanner = list(mongo.db.mealplanner.find())
     return render_template("mealagenda.html", mealplanner=mealplanner)
 
-# Route to search function on recipes page
+
+# Route to search function in recipes
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
