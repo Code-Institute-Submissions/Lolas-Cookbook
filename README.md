@@ -192,12 +192,13 @@ I got inspiration from:
 
 * The [VeggiePedia][8] example project from Code Institute
 * The Data Centric Development mini project from the Code Institute Course: building a taskmanager application
+* How to show confirm message before deleting a recipe or a mealplan: [stackoverflow.com][1]
 
 ***I want to thank my mentor Brian M for guiding me through the process of creating my own online cookbook and mealplanner.***
  
 [DEMO]: <https://lolasrecipemanager.herokuapp.com/>
 [0]: <https://>
-[1]: <https://>
+[1]: <https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete>
 [2]: <https://https://fonts.google.com/specimen/Baloo+Tammudu+2?sidebar.open=true&selection.family=Baloo+Tammudu+2>
 [3]: <https://https://fonts.google.com/specimen/Dancing+Script?sidebar.open=true&selection.family=Dancing+Script:wght@600>
 [4]: <https://github.com/Sweetzia/Lolas-Recipe-Manager>
