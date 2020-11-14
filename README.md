@@ -124,13 +124,26 @@ DELETE RECIPES
 **Challenges**
 
 * Building my mealplanner and meal agenda on one page was a difficulty for me. So I decided to first build 2 seperate pages: a mealplanner and a mealagenda. After I got the code for both pages work succesfully, I combined the two pages together in one page. But as a result my python code did not work properly and I could not get a correct connection with my recipes database. So I changed it all back to two seperate pages.
-* Writing the code to view my recipe on a full page failed and after struggling with the code, I asked my mentor for help. 
+* Writing the code to view my recipe on a full page was a challenge and after struggling with the code, I asked my mentor for help. Brian M. helped me understand my python code and I had to render_template instead of redirect my route to view_recipe.
 
 **Testing**
 
 **All testing carried out was done manually**
 Testing problems I encountered:
-* I was not able to view my recipe on a full page. My mentor Brian helped me to understand my python code and why it did not work. I used return redirect instead of render_template.
+* I was not able to view my recipe on a full page in my mealplanner. I thought going to the url of view_recipe would automatically show the full page of my chosen recipe in my mealagenda, but it showed no data. Because of shortage of time I removed the viewing button in my mealagenda. I decided this is a feature I want to implement in the future. When I am more experienced in Python Flask and MongoDB.
+
+
+| Test      | Result | 
+| :---        |    :----:   |   
+| Navbar links and homepage     | No errrors. Works.|        |    :----:   |
+| 'Add Recipe' link in the navbar should navigate to the add_recipe page   | No errrors. Works. | 
+| After filling out the form to add a recipe, when I click on the 'Add Recipe' button it should navigate to the ‘recipes’ page and say : ‘Your recipe is succesfully added’.      | No errrors. Works.| 
+| Clicking on 'edit recipe' on the browse recipes page should navigate to the edit_recipe page and pre-populate all formfields with the recipes database information.   | No errrors. Works. | 
+| Changing any of the recipe information on the edit_recipes page and clicking on the 'update recipe' button should bring up a message, save the updated information to the database and navigate back to the browse recipes page.     | No errrors. Works.| 
+| Clicking on the 'cancel' button on the edit_recipes page should navigate back to the recipes page.  | No errrors. Works. | 
+| Clicking on the 'delete recipe' button should give an alert and when chosen for deleting the recipe, show the message: Recipe succesfully deleted.     | No errrors. Works.| 
+| Clicking on the ‘Add Recipe to Mealplanner’ button on the mealplanner page should update the database accordingly and navigate to the meal agenda page.   | No errrors. Works. | 
+
 
 * Code Validation
 

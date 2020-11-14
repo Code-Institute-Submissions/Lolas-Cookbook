@@ -32,6 +32,9 @@ nav .brand-logo {
     margin-right: 1em;
 }
 
+button {
+    border-style: none;
+}
 h1,
 h4,
 h5,
@@ -98,6 +101,19 @@ img {
 
 .footer-copyright {
     font-family: 'Baloo Tammudu 2', cursive;
-        margin-left: 11em;
+    margin-left: 5em;
 }
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {  
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 0;
+    padding-left: 10px;
+}
+}
+
+
           

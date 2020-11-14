@@ -103,7 +103,6 @@ def add_mealplanner():
         recipes = {
             "recipe_name": request.form.get("recipe_name"),
             "date_picker": request.form.get("date_picker"),
-
         }
         mongo.db.mealplanner.insert_one(recipes)
         flash("Your recipe is succesfully added to your mealplanner")
