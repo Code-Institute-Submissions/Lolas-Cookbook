@@ -170,7 +170,7 @@ Going forward I would like to implement the following features:
 
 The project is stored in a [GitHub repository][4] and hosted on Heroku.
 
-I followed the next steps to deploy my game on the GitHub pages:
+I followed the next steps to deploy [lola's cookbook][9] on the GitHub pages:
 
 * Log into GitHub.
 * Select Sweetzia/Lolas-Recipe-Manager in the repository list.
@@ -223,6 +223,7 @@ I got inspiration from:
 [6]: <https://stemandspoon.com/>
 [7]: <https://wikiwand.com>
 [8]: <https://github.com/3PU/cook-book-milestone-project>
+[9]: <https://sweetzia.github.io/Lolas-Recipe-Manager/>
 
 
 
