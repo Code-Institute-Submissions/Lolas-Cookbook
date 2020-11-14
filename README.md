@@ -1,4 +1,4 @@
-Lola’s Cookbook - Recipe Manager
+Lola’s Cookbook
 ---------------------------------------
 **Data Centric Development - Marjolein van Leeuwen**
 
