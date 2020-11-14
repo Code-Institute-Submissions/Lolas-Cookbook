@@ -130,7 +130,7 @@ DELETE RECIPES
 
 **All testing carried out was done manually**
 Testing problems I encountered:
-* I was not able to view my recipe on a full page.
+* I was not able to view my recipe on a full page. My mentor Brian helped me to understand my python code and why it did not work. I used return redirect instead of render_template.
 
 * Code Validation
 
@@ -190,14 +190,14 @@ All of the text content on the website was written by me.
 
 I got inspiration from:
 
-* The [VeggiePedia][8] example project from Code Institute
+* The [VeggiePedia][8] example project from [Sascha Gogolin][0]
 * The Data Centric Development mini project from the Code Institute Course: building a taskmanager application
 * How to show confirm message before deleting a recipe or a mealplan: [stackoverflow.com][1]
 
-***I want to thank my mentor Brian M for guiding me through the process of creating my own online cookbook and mealplanner.***
+***I want to thank my mentor Brian M for guiding me through the process of creating lola's cookbook and mealplanner.***
  
 [DEMO]: <https://lolasrecipemanager.herokuapp.com/>
-[0]: <https://>
+[0]: <https://github.com/3PU>
 [1]: <https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete>
 [2]: <https://https://fonts.google.com/specimen/Baloo+Tammudu+2?sidebar.open=true&selection.family=Baloo+Tammudu+2>
 [3]: <https://https://fonts.google.com/specimen/Dancing+Script?sidebar.open=true&selection.family=Dancing+Script:wght@600>
