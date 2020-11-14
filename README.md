@@ -147,12 +147,16 @@ Testing problems I encountered:
 
 * Code Validation
 
+| Test      | Result | 
+| :---        |    :----:   |   
+| style.css     | No errrors found|        |    :----:   |
+| script.js   | missing semicolon, 2 warnings: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).| 
+| all html code | No errrors found| 
+| app.py | Line to long (71,90,100) and no new line at end of file| 
+
 * Responsive design
 
-* Screen size testing
-
-* Navigation
-
+Lola's Cookbook was tested on the Chrome browser and on multiple mobile devices (iPhone 5, 6, 7, 8, iPad, Ipad-pro, Iphone X, Moto G4, Galaxy S5, Pixel 2 and Pixel2XL) to ensure compatibility and responsiveness.
 
 **Features Left to Implement**
 

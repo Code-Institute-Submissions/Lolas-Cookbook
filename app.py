@@ -17,6 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Route to index page
 @app.route("/")
 @app.route("/lolas_cookbook")
