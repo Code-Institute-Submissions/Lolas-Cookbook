@@ -228,7 +228,7 @@ I got inspiration from:
 [5]: <https://tastingtable.com>
 [6]: <https://stemandspoon.com/>
 [7]: <https://wikiwand.com>
-[8]: <https://github.com/3PU/cook-book-milestone-project>
+[8]: <https://codei-cook-book.herokuapp.com/>
 [9]: <https://sweetzia.github.io/Lolas-Recipe-Manager/>
 [10]: <https://unsplash.com/>
 [11]: <https://materializecss.com/getting-started.html>
