@@ -30,7 +30,7 @@ The ideal user:
 
 **Database**
 
-* The database chosen for this is a non-relational database hosted on MongoDB.
+* The database chosen for this is a non-relational database hosted on [MongoDB Atlas][12].
 * The web application uses 3 database collections, 'categories', 'recipes' and 'mealplanner'.
 
 **Skeleton** 
@@ -79,7 +79,7 @@ I created a wireframe using the program “Mockflow”. 
 **Features**
 
 The website has been built with a mobile-first approach and is responsive.
-This is achieved by using the front end framework from Materialize and custom-written css.
+This is achieved by using the front end framework from [Materialize][11] and custom-written css.
 
 **CRUD functions**
 
@@ -208,7 +208,7 @@ The text content on the website was written by me.
 
 * The recipe images used accross the page were obtained from Google Images.
 * The carrousel images (philipino cuisine) were made by the photografers: Alex Lau and Stephanie Breijo
-* The Macbook photo in my README.md was made by Ben Kolde from [Unsplash][9] and adjusted with a picture from my website with Pixlr.com.
+* The Macbook photo in my README.md was made by Ben Kolde from [Unsplash][10] and adjusted with a picture from my website with Pixlr.com.
 
 **Acknowledgements**
 
@@ -230,11 +230,10 @@ I got inspiration from:
 [6]: <https://stemandspoon.com/>
 [7]: <https://wikiwand.com>
 [8]: <https://github.com/3PU/cook-book-milestone-project>
-<<<<<<< HEAD
-[9]: <https://unsplash.com>
-=======
 [9]: <https://sweetzia.github.io/Lolas-Recipe-Manager/>
->>>>>>> 847f06e6b2d17c28391d3fc5e84d2152a8664019
+[10]: <https://unsplash.com/>
+[11]: <https://materializecss.com/getting-started.html>
+[12]: <https://www.mongodb.com/cloud/atlas>
 
 
 
