@@ -35,7 +35,7 @@ The ideal user:
 
 **Skeleton** 
 
-I created a wireframe using the program “Mockflow”. 
+I created a wireframe using the program [“Mockflow”][13]. 
 
 ![Wireframe1](static/wireframe/Wireframe1.png)
 ![Wireframe2](static/wireframe/Wireframe4.png)
@@ -177,7 +177,7 @@ Going forward I would like to implement the following features:
 
 The project is stored in a [GitHub repository][4] and hosted on Heroku.
 
-I followed the next steps to deploy [lola's cookbook][9] on the GitHub pages:
+I followed the next steps to deploy [Lola's Cookbook][9] on the GitHub pages:
 
 * Log into GitHub.
 * Select Sweetzia/Lolas-Recipe-Manager in the repository list.
@@ -234,6 +234,7 @@ I got inspiration from:
 [10]: <https://unsplash.com/>
 [11]: <https://materializecss.com/getting-started.html>
 [12]: <https://www.mongodb.com/cloud/atlas>
+[13]: <https://www.mockflow.com/>
 
 
 
