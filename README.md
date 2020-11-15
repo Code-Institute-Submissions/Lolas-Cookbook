@@ -151,7 +151,7 @@ Testing problems I encountered:
 | :---        |    :----:   |   
 | style.css     | No errrors found|        |    :----:   |
 | script.js   | missing semicolon, 2 warnings: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).| 
-| all html code | No errrors found| 
+| index.html | Error: An img element must have an alt attribute, except under certain conditions. | 
 | app.py | Line to long (71,90,100) and no new line at end of file| 
 
 * Responsive design
