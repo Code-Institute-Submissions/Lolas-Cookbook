@@ -223,8 +223,8 @@ I got inspiration from:
 [DEMO]: <https://lolasrecipemanager.herokuapp.com/>
 [0]: <https://github.com/3PU>
 [1]: <https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete>
-[2]: <https://https://fonts.google.com/specimen/Baloo+Tammudu+2?sidebar.open=true&selection.family=Baloo+Tammudu+2>
-[3]: <https://https://fonts.google.com/specimen/Dancing+Script?sidebar.open=true&selection.family=Dancing+Script:wght@600>
+[2]: <https://fonts.google.com/specimen/Baloo+Tammudu+2?sidebar.open=true&selection.family=Baloo+Tammudu+2>
+[3]: <https://fonts.google.com/specimen/Dancing+Script?sidebar.open=true&selection.family=Dancing+Script:wght@600>
 [4]: <https://github.com/Sweetzia/Lolas-Recipe-Manager>
 [5]: <https://tastingtable.com>
 [6]: <https://stemandspoon.com/>
