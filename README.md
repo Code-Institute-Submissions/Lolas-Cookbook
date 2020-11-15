@@ -129,11 +129,10 @@ DELETE RECIPES
 **Testing**
 
 **All testing carried out was done manually**
+
 Testing problems I encountered:
-* I was not able to view my recipe on a full page in my mealplanner. 
-I thought going to the url of view_recipe would automatically show the full page of my chosen recipe in my mealagenda, but it showed no data. 
-Because of shortage of time I removed the viewing button in my mealagenda. I decided this is an extra feature I want to implement in the future. 
-When I am more experienced in Python Flask and MongoDB.
+* I was not able to view my recipe on a full page from my mealagenda. 
+I thought using the same route to view_recipe would automatically show the full page of my chosen recipe in my mealagenda, but it showed no data. I asked help from tutor support and discovered what I needed to do is adding the recipe id into the mealplanner entry when creating them. Then link to that id, rather than ._id. I did not succeed in making this work and because of shortage in time I removed the viewing button in my mealagenda. I decided this is an extra feature I want to implement in the future. When I am more experienced in Python Flask and MongoDB.
 
 
 | Test      | Result | 
