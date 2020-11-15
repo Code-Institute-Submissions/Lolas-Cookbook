@@ -148,7 +148,7 @@ When I am more experienced in Python Flask and MongoDB.
 | Clicking on the ‘Add Recipe to Mealplanner’ button on the mealplanner page should update the database accordingly and navigate to the meal agenda page.   | No errrors. Works. | 
 
 
-* Code Validation
+**Code Validation**
 
 | Test      | Result | 
 | :---        |    :----:   |   
@@ -160,7 +160,7 @@ When I am more experienced in Python Flask and MongoDB.
 | app.py | Line to long (line 90) and no new line at end of file(line 135)| 
 | env.py | Line too long (line 6)|
 
-* Responsive design
+**Responsive design**
 
 Lola's Cookbook was tested on the Chrome browser and on multiple mobile devices (iPhone 5, 6, 7, 8, iPad, Ipad-pro, Iphone X, Moto G4, Galaxy S5, Pixel 2 and Pixel2XL) to ensure compatibility and responsiveness.
 
