@@ -12,10 +12,8 @@
                 <select id="recipe_name" name="recipe_name" class="validate" required>
                     <option value="" disabled selected>Choose Recipe</option>
       {% for recipes in mealplanner %}
-      
                     <option value="{{ recipes.recipe_name }}">{{ recipes.recipe_name }}</option>
     {% endfor %}
-    
                 </select>
                 <label for="recipe_name">Choose a recipe from your database</label>
             </div>
@@ -36,7 +34,7 @@
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
-                <button class="btn waves-effect waves-light #ffa000 amber darken-2" type="submit"> Add Recipe to Mealplanner
+                <button class="btn waves-effect waves-light #ffa000 amber darken-2" type="submit"> Add Recipe to Mealagenda
     
                     <i class="fas fa-plus-square left"></i>
                 </button>

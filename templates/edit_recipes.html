@@ -2,97 +2,92 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <h3 class= "text-darken-4 center-align">Edit Recipe</h3>
-
-
 <div class="row card-panel #efebe9 brown lighten-5">
-    <form class="col s12" method="POST" action="{{ url_for('edit_recipes', recipes_id=recipes._id) }}">
-
-
-    <!-- Edit data in recipe category selection -->
-    <div class="row">
-    <div class="input-field col s12">
-     <i class="fas fa-folder-open prefix text-darken-4"></i>
-    <select id="category_name" name="category_name" class="validate" required>
-      <option value="" disabled>Choose Category</option>
+	<form class="col s12" method="POST" action="{{ url_for('edit_recipes', recipes_id=recipes._id) }}">
+		<!-- Edit data in recipe category selection -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-folder-open prefix text-darken-4"></i>
+				<select id="category_name" name="category_name" class="validate" required>
+					<option value="" disabled>Choose Category</option>
       {% for category in categories %}
       {% if category.category_name == recipes.category_name %}
-      <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+      
+					<option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
     {% else %}
-      <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+      
+					<option value="{{ category.category_name }}">{{ category.category_name }}</option>
     {% endif %}
     {% endfor %}
-    </select>
-    <label for="category_name">Recipe Category</label>
-  </div>
-    </div>
-
-    <!-- Edit data in recipe name -->
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="fas fa-utensils prefix text-darken-4"></i>
-          <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
+    
+				</select>
+				<label for="category_name">Recipe Category</label>
+			</div>
+		</div>
+		<!-- Edit data in recipe name -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-utensils prefix text-darken-4"></i>
+				<input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
           value="{{ recipes.recipe_name }}" type="text" class="validate">
-          <label for="recipe_name">Recipe name</label>
-        </div>
-
-    <!-- Edit data in Recipe description-->
-        <div class="input-field col s12">
-         <i class="fas fa-clipboard prefix text-darken-4"></i>
-          <textarea id="recipe_description" name="recipe_description" minlength="5"
+					<label for="recipe_name">Recipe name</label>
+				</div>
+				<!-- Edit data in Recipe description-->
+				<div class="input-field col s12">
+					<i class="fas fa-clipboard prefix text-darken-4"></i>
+					<textarea id="recipe_description" name="recipe_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required>
                         {{- recipes.recipe_description -}}
                         </textarea>
-                    <label for="recipe_description">Recipe Description</label>
-        </div>
-
-<!-- Edit data in Recipe image-->
-                    <div class="input-field col s12">
-                    <i class="far fa-images prefix text-darken-4"></i><label class="form-field-description"></label>
-                    <input class="form-control" id="image_link" name="image_link" type="url" pattern="https://.*" required data-validation-required-message="Please enter a valid link to the recipe image." value="{{ recipes.image_link }}" >
-                    <label for="recipe_image">Recipe image</label>
-                    </div>
-
-    <!-- Edit data in Family story-->
-        <div class="input-field col s12">
-         <i class="fas fa-smile-beam prefix text-darken-4"></i>
-          <textarea id="family_story" name="family_story" minlength="5"
+					<label for="recipe_description">Recipe Description</label>
+				</div>
+				<!-- Edit data in Recipe image-->
+				<div class="input-field col s12">
+					<i class="far fa-images prefix text-darken-4"></i>
+					<label class="form-field-description"></label>
+					<input class="form-control" id="image_link" name="image_link" type="url" pattern="https://.*" required data-validation-required-message="Please enter a valid link to the recipe image." value="{{ recipes.image_link }}" >
+						<label for="recipe_image">Recipe image</label>
+					</div>
+					<!-- Edit data in Family story-->
+					<div class="input-field col s12">
+						<i class="fas fa-smile-beam prefix text-darken-4"></i>
+						<textarea id="family_story" name="family_story" minlength="5"
                         maxlength="300" class="materialize-textarea validate" required>{{ recipes.family_story }}</textarea>
-                    <label for="family_story">Family Story</label>
-        </div>
-
-    <!-- Edit data in Recipe Ingredients-->
-        <div class="input-field col s12">
-         <i class="fas fa-clipboard-list prefix text-darken-4"></i>
-          <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
+						<label for="family_story">Family Story</label>
+					</div>
+					<!-- Edit data in Recipe Ingredients-->
+					<div class="input-field col s12">
+						<i class="fas fa-clipboard-list prefix text-darken-4"></i>
+						<textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
                         maxlength="400" class="materialize-textarea validate" required>{{ recipes.recipe_ingredients }}</textarea>
-                    <label for="recipe_ingredients">Recipe Ingredients</label>
-        </div>
-
-    <!-- Edit data in Cooking Instruction-->
-        <div class="input-field col s12">
-         <i class="fas fa-temperature-high prefix text-darken-4"></i>
-          <textarea id="cooking_instruction" name="cooking_instruction" minlength="5"
+						<label for="recipe_ingredients">Recipe Ingredients</label>
+					</div>
+					<!-- Edit data in Cooking Instruction-->
+					<div class="input-field col s12">
+						<i class="fas fa-temperature-high prefix text-darken-4"></i>
+						<textarea id="cooking_instruction" name="cooking_instruction" minlength="5"
                         maxlength="1000" class="materialize-textarea validate" required>{{ recipes.cooking_instruction }}</textarea>
-                    <label for="cooking_instruction">Cooking Instruction</label>
-        </div>
-
-<!-- submit button -->
-<div class="row">
-<div class="col s12 center-align">
-<!-- cancel button -->
-                    <a href="{{ url_for('get_recipes') }}" class="btn waves-effect red">
-                        Cancel <i class="fas fa-times-circle right"></i>
-                    </a>
-<button class="btn waves-effect waves-light #ffa000 amber darken-2" type="submit"> Edit Recipe
-    <i class="fas fa-edit left"></i>
-  </button>
-        </div>
-
-      </div>
-      </div>
-    </form>
-  </div>
+						<label for="cooking_instruction">Cooking Instruction</label>
+					</div>
+					<!-- submit button -->
+					<div class="row">
+						<div class="col s12 center-align">
+							<!-- cancel button -->
+							<a href="{{ url_for('get_recipes') }}" class="btn waves-effect red">
+                        Cancel 
+								<i class="fas fa-times-circle right"></i>
+							</a>
+							<button class="btn waves-effect waves-light #ffa000 amber darken-2" type="submit"> Edit Recipe
+    
+								<i class="fas fa-edit left"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
         
 
 {% endblock %}

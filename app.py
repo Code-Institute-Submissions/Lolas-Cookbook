@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -68,7 +68,7 @@ def add_recipes():
     return render_template("add_recipes.html", categories=categories)
 
 
-# Route to edit_recipes.html to edit my recipe and update the new information recipes database
+# Route to edit_recipes.html to edit my recipe and update the new recipe data
 @app.route("/edit_recipes/<recipes_id>", methods=["GET", "POST"])
 def edit_recipes(recipes_id):
     if request.method == "POST":
@@ -97,8 +97,8 @@ def view_recipe(recipes_id):
     return render_template("view_recipe.html", recipe=recipe)
 
 
-# Route to my mealplanner. You can add a meal from your database to your mealplanner agenda +pick a date
-@app.route("/add_mealplanner", methods=["GET", "POST"])
+# Mealplanner route to add a recipe from database to meal agenda +pick a date
+@app.route("/add_mealplanner/", methods=["GET", "POST"])
 def add_mealplanner():
     if request.method == "POST":
         recipes = {
@@ -106,7 +106,7 @@ def add_mealplanner():
             "date_picker": request.form.get("date_picker"),
         }
         mongo.db.mealplanner.insert_one(recipes)
-        flash("Your recipe is succesfully added to your mealplanner")
+        flash("Your recipe is succesfully added to your mealagenda")
         return redirect(url_for("get_mealplanner"))
 
     mealplanner = mongo.db.recipes.find().sort("recipe_name", 1)

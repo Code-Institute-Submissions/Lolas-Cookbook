@@ -108,7 +108,7 @@ BROWSE RECIPES
 * On the Browse Recipes page, the user can select a specific recipe by clicking on the 'view' button and is then presented with a full-page view of the recipe and all its details.
 
 MEAL AGENDA
-* The meal agenda page shows all the recipe names and dates you added with the mealplanner. As a user you can choose to view the recipe from your mealagenda.
+* The meal agenda page shows all the recipe names and dates you added with the mealplanner. 
 
 ***Users can edit recipes in the database. (Update)***
 
@@ -124,13 +124,16 @@ DELETE RECIPES
 **Challenges**
 
 * Building my mealplanner and meal agenda on one page was a difficulty for me. So I decided to first build 2 seperate pages: a mealplanner and a mealagenda. After I got the code for both pages work succesfully, I combined the two pages together in one page. But as a result my python code did not work properly and I could not get a correct connection with my recipes database. So I changed it all back to two seperate pages.
-* Writing the code to view my recipe on a full page was a challenge and after struggling with the code, I asked my mentor for help. Brian M. helped me understand my python code and I had to render_template instead of redirect my route to view_recipe.
+* Writing the code to view my recipe on a full page was a challenge and after struggling with the code, I asked my mentor for help. Brian M. helped me understand my python code and I had to render_template instead of redirect my route to view_recipe. 
 
 **Testing**
 
 **All testing carried out was done manually**
 Testing problems I encountered:
-* I was not able to view my recipe on a full page in my mealplanner. I thought going to the url of view_recipe would automatically show the full page of my chosen recipe in my mealagenda, but it showed no data. Because of shortage of time I removed the viewing button in my mealagenda. I decided this is a feature I want to implement in the future. When I am more experienced in Python Flask and MongoDB.
+* I was not able to view my recipe on a full page in my mealplanner. 
+I thought going to the url of view_recipe would automatically show the full page of my chosen recipe in my mealagenda, but it showed no data. 
+Because of shortage of time I removed the viewing button in my mealagenda. I decided this is an extra feature I want to implement in the future. 
+When I am more experienced in Python Flask and MongoDB.
 
 
 | Test      | Result | 
@@ -151,8 +154,11 @@ Testing problems I encountered:
 | :---        |    :----:   |   
 | style.css     | No errrors found|        |    :----:   |
 | script.js   | missing semicolon, 2 warnings: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).| 
-| all html code | No errrors found| 
-| app.py | Line to long (71,90,100) and no new line at end of file| 
+| index.html | Error: An img element must have an alt attribute, except under certain conditions.| 
+| view_recipe.html | Unclosed element div. (line 7)|
+| Other html files | No errors found|
+| app.py | Line to long (line 90) and no new line at end of file(line 135)| 
+| env.py | Line too long (line 6)|
 
 * Responsive design
 
@@ -165,6 +171,7 @@ Going forward I would like to implement the following features:
 * Login and registration feature: Enabling users to create an account and log in.
 * Storing user data: Storing user data (username) for each recipe, connecting the recipe to the user that created it.
 * Rating feature: Enabling users to vote on recipes.
+* View Recipe button in my mealagenda
 
 **Deployment**
 
@@ -195,13 +202,13 @@ I followed the next steps to host lola's cookbook on Heroku:
 
 **Content**
 
-All of the text content on the website was written by me.
+The text content on the website was written by me.
 
 **Media**
 
 * The recipe images used accross the page were obtained from Google Images.
 * The carrousel images (philipino cuisine) were made by the photografers: Alex Lau and Stephanie Breijo
-* The Macbook photo in my README.md was made by Ben Kolde from Unsplash and adjusted with a picture from my website with Pixlr.com.
+* The Macbook photo in my README.md was made by Ben Kolde from [Unsplash][9] and adjusted with a picture from my website with Pixlr.com.
 
 **Acknowledgements**
 
@@ -223,6 +230,7 @@ I got inspiration from:
 [6]: <https://stemandspoon.com/>
 [7]: <https://wikiwand.com>
 [8]: <https://github.com/3PU/cook-book-milestone-project>
+[9]: <https://unsplash.com>
 
 
 
